@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Alex Short - Multimedia Composer</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ac736d8bde.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div id="top-banner">
+        <h1 id="logo">Alex <span class="accent">Short</span></h1>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"
+          ><span class="nav-icon"></span
+        ></label>
+        <hr id="line" />
+      </div>
+      <nav id="nav-links">
+        <ul id="menu">
+          <a class="link" href="#about"><li>About</li></a>
+          <a class="link" href="#music"><li>Music</li></a>
+          <a class="link" href="#contact"><li>Contact</li></a>
+        </ul>
+      </nav>
+      <hr id="line2" />
+      <div id="jumbotron">
+        <h1>Multimedia Composer</h1>
+        <p>
+          You will begin to discover why you've
+          <span class="accent">never</span> heard of me before
+        </p>
+      </div>
+    </header>
+    <section id="about">
+      <div class="container">
+        <hr class="orange-line" />
+        <h2 class="title">Hi, I'm Alex</h2>
+        <h3>Multimedia Composer</h3>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Join the Riot Against Reality to find the cause of this insanity.
+              Weapons of sound with no ammunition. Fight for your life and
+              accomplish this mission. It’s the day we’ve all been waiting for!
+              The sound of the crowd’s mighty uproar is heard around the world
+              in our search for the key, the key to unlock our dreams of
+              reality.
+            </p>
+            <p>
+              Just look at us now, we’re as high as a cloud without a regret -
+              it’s gone straight to our heads! Why aren’t I impressed with what
+              should be the best? Let’s sit on the sofa, and we’ll talk this
+              over.
+            </p>
+          </div>
+          <img src="/images/al-band-cropped2.png" alt="" />
+        </div>
+
+        <hr class="orange-line" />
+      </div>
+    </section>
+    <section id="music">
+      <div class="soundcloud-player">
+        <iframe
+          width="100%"
+          height="450"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/258493111&color=%23ffb100&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+        ></iframe>
+        <div
+          style="
+            font-size: 10px;
+            color: #cccccc;
+            line-break: anywhere;
+            word-break: normal;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+              Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+            font-weight: 100;
+          "
+        >
+          <a
+            href="https://soundcloud.com/user-128066818"
+            title="Alex Short - Multimedia Composer"
+            target="_blank"
+            style="color: #cccccc; text-decoration: none;"
+            >Alex Short - Multimedia Composer</a
+          >
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <hr class="orange-line" />
+        <h2 class="title">Contact Me</h2>
+        <p>
+          Contact me here or via <span class="accent">email</span> if you are
+          interested in working with me.
+        </p>
+        <div class="contact-flex">
+          <div id="contact-blocks">
+            <div id="location" class="contact-detail">
+              <div class="icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3>Bristol, UK</h3>
+            </div>
+            <div id="email-address" class="contact-detail">
+              <div class="icon">
+                <i class="far fa-envelope"></i>
+              </div>
+              <h3>info@alexshort.com</h3>
+            </div>
+            <div id="phone-number" class="contact-detail">
+              <i class="fas fa-mobile-alt"></i>
+              <h3>07123 456 789</h3>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form action="contactform.php" method="post" id="contact-form">
+              <input
+                name="name"
+                type="text"
+                class="form-control"
+                placeholder="Your Name *"
+                required
+              />
+              <input
+                name="email"
+                type="email"
+                class="form-control"
+                placeholder="Your Email *"
+                required
+              />
+              <textarea
+                name="message"
+                class="form-control"
+                placeholder="Message *"
+                rows="4"
+                required
+              ></textarea>
+              <button type="submit" name="submit" class="form-control submit">Submit</button>
+          </div>
+        </div>
+        <div id="social-icons">
+          <i class="fab fa-soundcloud"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+        <hr class="orange-line" />
+      </div>
+    </section>
+    <footer>
+      <p>
+        © Copyright. All rights reserved | Designed by
+        <a href="http://github.com/adamhills91">Adam Hills</a>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

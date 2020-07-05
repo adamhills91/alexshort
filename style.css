@@ -1,0 +1,481 @@
+:root {
+  --orange: #ffb100;
+  --grey: #2e2e2e;
+  --dark-grey: #1b1b1b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Avenir Next", sans-serif;
+  background-color: var(--dark-grey);
+  position: relative;
+}
+
+header {
+  height: 100%;
+  background: linear-gradient(rgba(27, 27, 27, 0.9), rgba(27, 27, 27, 0.9)),
+    url(/images/headphones.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#top-banner {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 0 0;
+}
+
+#logo {
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+}
+
+.accent {
+  color: var(--orange);
+}
+
+#nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#menu {
+  margin: 0;
+  padding: 0 20px;
+  width: 100%;
+  list-style-type: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-grey);
+  justify-content: space-evenly;
+  align-items: center;
+  clear: both;
+  max-height: 0px;
+  transition: max-height 0.4s ease-out;
+  position: absolute;
+}
+
+#menu li {
+  padding: 40px 0;
+  text-align: center;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in;
+}
+
+#menu a:hover {
+  color: var(--orange);
+}
+
+.menu-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-icon {
+  margin: 0 auto;
+  background-color: white;
+  display: block;
+  height: 2px;
+  width: 30px;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+
+.nav-icon::before {
+  background-color: white;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  transition: all 0.2s ease-out;
+}
+
+.nav-icon::after {
+  background-color: white;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -10px;
+  transition: all 0.2s ease-out;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* .menu-btn:checked ~ * #menu {
+  max-height: 300px;
+  border-bottom: 1px solid white;
+} */
+
+#line {
+  height: 1px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 30px auto 0;
+  width: 70%;
+  transition: width 0.3s ease-in;
+}
+
+#line2 {
+  display: none;
+  height: 1px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 70%;
+}
+
+.orange-line {
+  height: 1px;
+  border: none;
+  background-color: var(--orange);
+}
+
+#jumbotron {
+  padding: 100px 30px;
+  text-align: center;
+  color: white;
+}
+
+#jumbotron h1 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 2.4rem;
+  letter-spacing: 0.2rem;
+}
+
+#jumbotron p {
+  font-weight: lighter;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+
+.container {
+  margin: 60px 7%;
+  background-color: var(--dark-grey);
+}
+
+.container {
+  background-color: var(--grey);
+  padding: 30px 7%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  padding: 30px 0 0;
+  color: white;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+#about h3 {
+  color: var(--orange);
+  font-weight: normal;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+#about img {
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#about p {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  line-height: 25px;
+  /* font-weight: lighter; */
+}
+
+.about-text {
+  margin: 30px 0;
+}
+
+#music {
+  background-color: var(--grey);
+  padding: 60px 0;
+}
+
+.soundcloud-player {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#contact p {
+  color: white;
+  margin: 15px 0 60px;
+}
+.contact-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin: 30px 0;
+  /* height: 100px; */
+  /* background: pink; */
+}
+
+.contact-detail i {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.contact-detail h3 {
+  font-weight: normal;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+#contact-form {
+  width: 85%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  /* height: 250px; */
+  justify-content: space-between;
+}
+
+.form-control {
+  font-family: "Avenir Next", sans-serif;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  margin: 10px 0;
+  box-shadow: 0px 5px 10px var(--dark-grey);
+}
+
+.submit {
+  width: 50%;
+  margin: 30px auto 0;
+  background: transparent;
+  border: 1px solid var(--orange);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.submit:hover {
+  background-color: var(--orange);
+}
+
+#social-icons {
+  margin: 60px 0 30px;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-size: 2rem;
+}
+
+#social-icons i {
+  transition: color 0.2s ease-in;
+}
+
+#social-icons i:hover {
+  color: var(--orange);
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  background-color: var(--grey);
+  padding: 30px;
+  color: white;
+  font-size: 0.7rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--orange);
+}
+
+@media only screen and (min-width: 640px) {
+  #line {
+    width: 80%;
+  }
+  #jumbotron {
+    padding: 180px 30px;
+    text-align: center;
+    color: white;
+  }
+  #jumbotron h1 {
+    font-size: 3rem;
+    letter-spacing: 0.4rem;
+  }
+  .container {
+    padding: 60px 7%;
+    margin: 60px 7%;
+  }
+  .title {
+    padding: 60px 0 0;
+  }
+  #about img {
+    width: 100%;
+    margin: 15px 0 60px;
+  }
+
+  #music {
+    text-align: center;
+  }
+  #music iframe {
+    width: 90%;
+  }
+
+  #contact-blocks {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0 0;
+  }
+  .contact-detail {
+    padding: 0;
+  }
+  .submit {
+    width: 30%;
+  }
+  #social-icons {
+    margin: 60px auto;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .nav-icon {
+    display: none;
+  }
+  #nav-links {
+    position: absolute;
+  }
+  #menu {
+    width: 500px;
+    max-height: none;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    /* margin-bottom: 30px; */
+  }
+  #line {
+    display: none;
+  }
+  #line2 {
+    display: block;
+    margin: 90px auto 0;
+  }
+
+  #logo {
+    font-size: 4.5rem;
+    margin-bottom: 0;
+  }
+  #jumbotron h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.6rem;
+  }
+  .about-content {
+    margin: 30px 0 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .about-text {
+    margin: 0;
+    width: 45%;
+  }
+  #about p {
+    font-size: 0.8rem;
+    line-height: 20px;
+  }
+  #about img {
+    width: 45%;
+    margin: 0;
+  }
+  #music iframe {
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #about p {
+    font-size: 1rem;
+    line-height: 25px;
+  }
+
+  .contact-flex {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #contact-blocks {
+    /* border: 1px solid red; */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    margin: 0 auto;
+  }
+
+  #contact-blocks i {
+    font-size: 2rem;
+    margin-right: 40px;
+  }
+  .contact-detail {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0;
+  }
+  .contact-form {
+    width: 50%;
+  }
+  #contact-form {
+    margin: 0;
+  }
+  .form-control {
+    margin: 0 0 15px;
+  }
+  .submit {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
